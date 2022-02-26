@@ -1,3 +1,14 @@
+"_________________________________________
+"\_ _/ ____| ____| ___ \ ____| ___ \  ___/
+" | | |____| ____| ___ < ____| __  / |__ \
+"/___\_____|_____|_____/_____|_| \_\_____/
+"
+"File:       icebone.vim
+"Maintainer: cocopon <cocopon@me.com>
+"Modified:   2022-02-26 06:36+0200
+"License:    MIT
+
+
 if !has('gui_running') && &t_Co < 256
   finish
 endif
@@ -124,22 +135,22 @@ if &background == 'light'
   hi iceboneALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
-    let g:terminal_color_0 = '#dcdfe7'
-    let g:terminal_color_1 = '#cc517a'
-    let g:terminal_color_2 = '#668e3d'
-    let g:terminal_color_3 = '#c57339'
-    let g:terminal_color_4 = '#2d539e'
-    let g:terminal_color_5 = '#7759b4'
-    let g:terminal_color_6 = '#3f83a6'
-    let g:terminal_color_7 = '#33374c'
-    let g:terminal_color_8 = '#8389a3'
-    let g:terminal_color_9 = '#cc3768'
-    let g:terminal_color_10 = '#598030'
-    let g:terminal_color_11 = '#b6662d'
-    let g:terminal_color_12 = '#22478e'
-    let g:terminal_color_13 = '#6845ad'
-    let g:terminal_color_14 = '#327698'
-    let g:terminal_color_15 = '#262a3f'
+    let g:terminal_color_0= '#dcdfe7'
+    let g:terminal_color_1= '#cc517a'
+    let g:terminal_color_2= '#668e3d'
+    let g:terminal_color_3= '#c57339'
+    let g:terminal_color_4= '#2d539e'
+    let g:terminal_color_5= '#7759b4'
+    let g:terminal_color_6= '#3f83a6'
+    let g:terminal_color_7= '#33374c'
+    let g:terminal_color_8= '#8389a3'
+    let g:terminal_color_9= '#cc3768'
+    let g:terminal_color_10= '#598030'
+    let g:terminal_color_11= '#b6662d'
+    let g:terminal_color_12= '#22478e'
+    let g:terminal_color_13= '#6845ad'
+    let g:terminal_color_14= '#327698'
+    let g:terminal_color_15= '#262a3f'
   else
     let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#cc3768', '#598030', '#b6662d', '#22478e', '#6845ad', '#327698', '#262a3f']
   endif
@@ -154,7 +165,7 @@ else
   hi Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
   hi CursorLineNr cterm=NONE ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
   hi Delimiter ctermfg=252 guifg=#c6c8d1
-  hi DiffAdd ctermbg=29 ctermfg=158 guibg=#45493e guifg=#c0c5b9
+  hi DiffAdd ctermbg=29 ctermfg=158 guibg=#483749 guifg=#c3b3c4
   hi DiffChange ctermbg=23 ctermfg=159 guibg=#384851 guifg=#b3c3cc
   hi DiffDelete cterm=NONE ctermbg=95 ctermfg=224 gui=NONE guibg=#53343b guifg=#ceb0b6
   hi DiffText cterm=NONE ctermbg=30 ctermfg=195 gui=NONE guibg=#5b7881 guifg=#c6c8d1
@@ -175,18 +186,18 @@ else
   hi LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
   hi ModeMsg ctermfg=242 guifg=#6b7089
-  hi MoreMsg ctermfg=150 guifg=#b4be82
+  hi MoreMsg ctermfg=150 guifg=#be82a7
   hi Operator ctermfg=110 guifg=#84a0c6
   hi Pmenu ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
   hi PmenuSbar ctermbg=236 ctermfg=NONE guibg=#3d425b guifg=NONE
   hi PmenuSel ctermbg=240 ctermfg=255 guibg=#5b6389 guifg=#eff0f4
   hi PmenuThumb ctermbg=251 ctermfg=NONE guibg=#c6c8d1 guifg=NONE
-  hi PreProc ctermfg=150 guifg=#b4be82
-  hi Question ctermfg=150 guifg=#b4be82
+  hi PreProc ctermfg=150 guifg=#be82a7
+  hi Question ctermfg=150 guifg=#be82a7
   hi QuickFixLine ctermbg=236 ctermfg=252 guibg=#272c42 guifg=#c6c8d1
   hi Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
   hi SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
-  hi Special ctermfg=150 guifg=#b4be82
+  hi Special ctermfg=150 guifg=#be82a7
   hi SpecialKey ctermfg=240 guifg=#515e97
   hi SpellBad ctermbg=95 ctermfg=252 gui=undercurl guifg=NONE guisp=#e27878
   hi SpellCap ctermbg=24 ctermfg=252 gui=undercurl guifg=NONE guisp=#84a0c6
@@ -205,7 +216,7 @@ else
   hi TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#9a9ca5
   hi TermCursorNC ctermbg=242 ctermfg=234 guibg=#6b7089 guifg=#161821
   hi Title ctermfg=216 gui=NONE guifg=#e2a478
-  hi Todo ctermbg=234 ctermfg=150 guibg=#45493e guifg=#b4be82
+  hi Todo ctermbg=234 ctermfg=150 guibg=#483749 guifg=#be82a7
   hi Type ctermfg=110 gui=NONE guifg=#84a0c6
   hi Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=underline
   hi VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#0f1117 guifg=#0f1117
@@ -213,7 +224,7 @@ else
   hi VisualNOS ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
   hi iceboneNormalFg ctermfg=252 guifg=#c6c8d1
-  hi diffAdded ctermfg=150 guifg=#b4be82
+  hi diffAdded ctermfg=150 guifg=#be82a7
   hi diffRemoved ctermfg=203 guifg=#e27878
   hi ALEErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi ALEWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
@@ -221,10 +232,10 @@ else
   hi ALEVirtualTextWarning ctermfg=216 guifg=#e2a478
   hi CtrlPMode1 ctermbg=236 ctermfg=242 guibg=#2e313f guifg=#6b7089
   hi EasyMotionShade ctermfg=239 guifg=#3d425b
-  hi EasyMotionTarget ctermfg=150 guifg=#b4be82
+  hi EasyMotionTarget ctermfg=150 guifg=#be82a7
   hi EasyMotionTarget2First ctermfg=216 guifg=#e2a478
   hi EasyMotionTarget2Second ctermfg=216 guifg=#e2a478
-  hi GitGutterAdd ctermbg=235 ctermfg=150 guibg=#1e2132 guifg=#b4be82
+  hi GitGutterAdd ctermbg=235 ctermfg=150 guibg=#1e2132 guifg=#be82a7
   hi GitGutterChange ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
   hi GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
   hi GitGutterDelete ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
@@ -258,24 +269,24 @@ else
   hi iceboneALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
-    let g:terminal_color_0 = '#1e2132'
-    let g:terminal_color_1 = '#e27878'
-    let g:terminal_color_2 = '#b4be82'
-    let g:terminal_color_3 = '#e2a478'
-    let g:terminal_color_4 = '#84a0c6'
-    let g:terminal_color_5 = '#a093c7'
-    let g:terminal_color_6 = '#89b8c2'
-    let g:terminal_color_7 = '#c6c8d1'
-    let g:terminal_color_8 = '#6b7089'
-    let g:terminal_color_9 = '#e98989'
-    let g:terminal_color_10 = '#c0ca8e'
-    let g:terminal_color_11 = '#e9b189'
-    let g:terminal_color_12 = '#91acd1'
-    let g:terminal_color_13 = '#ada0d3'
-    let g:terminal_color_14 = '#95c4ce'
-    let g:terminal_color_15 = '#d2d4de'
+    let g:terminal_color_0= '#1e2132'
+    let g:terminal_color_1= '#e27878'
+    let g:terminal_color_2= '#be82a7'
+    let g:terminal_color_3= '#e2a478'
+    let g:terminal_color_4= '#84a0c6'
+    let g:terminal_color_5= '#a093c7'
+    let g:terminal_color_6= '#89b8c2'
+    let g:terminal_color_7= '#c6c8d1'
+    let g:terminal_color_8= '#6b7089'
+    let g:terminal_color_9= '#e98989'
+    let g:terminal_color_10= '#ca8eb3'
+    let g:terminal_color_11= '#e9b189'
+    let g:terminal_color_12= '#91acd1'
+    let g:terminal_color_13= '#ada0d3'
+    let g:terminal_color_14= '#95c4ce'
+    let g:terminal_color_15= '#d2d4de'
   else
-    let g:terminal_ansi_colors = ['#1e2132', '#e27878', '#b4be82', '#e2a478', '#84a0c6', '#a093c7', '#89b8c2', '#c6c8d1', '#6b7089', '#e98989', '#c0ca8e', '#e9b189', '#91acd1', '#ada0d3', '#95c4ce', '#d2d4de']
+    let g:terminal_ansi_colors = ['#1e2132', '#e27878', '#be82a7', '#e2a478', '#84a0c6', '#a093c7', '#89b8c2', '#c6c8d1', '#6b7089', '#e98989', '#ca8eb3', '#e9b189', '#91acd1', '#ada0d3', '#95c4ce', '#d2d4de']
   endif
 endif
 

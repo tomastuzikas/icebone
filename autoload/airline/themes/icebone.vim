@@ -23,7 +23,7 @@ function! s:build_palette() abort
     let col_warning  = ['#161821', '#e2a478', 234, 216]
     let col_insert   = ['#161821', '#84a0c6', 234, 110]
     let col_replace  = ['#161821', '#e2a478', 234, 216]
-    let col_visual   = ['#161821', '#b4be82', 234, 150]
+    let col_visual   = ['#161821', '#be82a7', 234, 150]
     let col_red      = ['#e27878', '#161821', 203, 234]
   endif
 
