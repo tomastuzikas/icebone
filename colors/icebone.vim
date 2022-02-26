@@ -89,7 +89,7 @@ if &background == 'light'
   hi Visual ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi VisualNOS ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi WildMenu ctermbg=235 ctermfg=252 guibg=#32364c guifg=#e8e9ec
-  hi icebergNormalFg ctermfg=237 guifg=#33374c
+  hi iceboneNormalFg ctermfg=237 guifg=#33374c
   hi diffAdded ctermfg=64 guifg=#668e3d
   hi diffRemoved ctermfg=125 guifg=#cc517a
   hi ALEErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
@@ -132,7 +132,7 @@ if &background == 'light'
   hi DiagnosticError ctermfg=125 guifg=#cc517a
   hi DiagnosticSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi DiagnosticFloatingHint ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#33374c
-  hi icebergALAccentRed ctermfg=125 guifg=#cc517a
+  hi iceboneALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
     let g:terminal_color_0 = '#dcdfe7'
@@ -223,7 +223,7 @@ else
   hi Visual ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi VisualNOS ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
-  hi icebergNormalFg ctermfg=252 guifg=#c6c8d1
+  hi iceboneNormalFg ctermfg=252 guifg=#c6c8d1
   hi diffAdded ctermfg=150 guifg=#b4be82
   hi diffRemoved ctermfg=203 guifg=#e27878
   hi ALEErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
@@ -266,7 +266,7 @@ else
   hi DiagnosticError ctermfg=203 guifg=#e27878
   hi DiagnosticSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi DiagnosticFloatingHint ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
-  hi icebergALAccentRed ctermfg=203 guifg=#e27878
+  hi iceboneALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
     let g:terminal_color_0 = '#1e2132'
@@ -295,14 +295,14 @@ hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
-hi! link cssClassNameDot icebergNormalFg
+hi! link cssClassNameDot iceboneNormalFg
 hi! link cssPseudoClassId Special
 hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
-hi! link jsonQuote icebergNormalFg
+hi! link jsonQuote iceboneNormalFg
 hi! link phpVarSelector Identifier
 hi! link pythonFunction Title
 hi! link rubyDefine Statement
@@ -310,21 +310,21 @@ hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
-hi! link rustFuncCall icebergNormalFg
+hi! link rustFuncCall iceboneNormalFg
 hi! link rustFuncName Title
 hi! link rustType Constant
 hi! link sassClass Special
-hi! link shFunction icebergNormalFg
+hi! link shFunction iceboneNormalFg
 hi! link vimContinue Comment
 hi! link vimFuncSID vimFunction
-hi! link vimFuncVar icebergNormalFg
+hi! link vimFuncVar iceboneNormalFg
 hi! link vimFunction Title
 hi! link vimGroup Statement
 hi! link vimHiGroup Statement
 hi! link vimHiTerm Identifier
 hi! link vimMapModKey Special
 hi! link vimOption Identifier
-hi! link vimVar icebergNormalFg
+hi! link vimVar iceboneNormalFg
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
@@ -335,7 +335,7 @@ hi! link yamlKeyValueDelimiter Delimiter
 hi! link CtrlPPrtCursor Cursor
 hi! link CtrlPMatch Title
 hi! link CtrlPMode2 StatusLine
-hi! link deniteMatched icebergNormalFg
+hi! link deniteMatched iceboneNormalFg
 hi! link deniteMatchedChar Title
 hi! link elixirBlockDefinition Statement
 hi! link elixirDefine Statement
@@ -345,25 +345,25 @@ hi! link elixirExUnitMacro Statement
 hi! link elixirExceptionDefine Statement
 hi! link elixirFunctionDeclaration Title
 hi! link elixirKeyword Statement
-hi! link elixirModuleDeclaration icebergNormalFg
+hi! link elixirModuleDeclaration iceboneNormalFg
 hi! link elixirModuleDefine Statement
 hi! link elixirPrivateDefine Statement
 hi! link elixirStringDelimiter String
-hi! link jsFlowMaybe icebergNormalFg
-hi! link jsFlowObject icebergNormalFg
+hi! link jsFlowMaybe iceboneNormalFg
+hi! link jsFlowObject iceboneNormalFg
 hi! link jsFlowType PreProc
-hi! link graphqlName icebergNormalFg
-hi! link graphqlOperator icebergNormalFg
+hi! link graphqlName iceboneNormalFg
+hi! link graphqlOperator iceboneNormalFg
 hi! link gitmessengerHash Comment
 hi! link gitmessengerHeader Statement
 hi! link gitmessengerHistory Constant
 hi! link jsArrowFunction Operator
-hi! link jsClassDefinition icebergNormalFg
+hi! link jsClassDefinition iceboneNormalFg
 hi! link jsClassFuncName Title
 hi! link jsExport Statement
 hi! link jsFuncName Title
 hi! link jsFutureKeys Statement
-hi! link jsFuncCall icebergNormalFg
+hi! link jsFuncCall iceboneNormalFg
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
@@ -379,7 +379,7 @@ hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
 hi! link markdownRule Comment
 hi! link ngxDirective Statement
-hi! link plug1 icebergNormalFg
+hi! link plug1 iceboneNormalFg
 hi! link plug2 Identifier
 hi! link plugDash Comment
 hi! link plugMessage Special
@@ -396,21 +396,21 @@ hi! link StartifyNumber Special
 hi! link StartifyPath Comment
 hi! link StartifySection Statement
 hi! link StartifySlash Comment
-hi! link StartifySpecial icebergNormalFg
+hi! link StartifySpecial iceboneNormalFg
 hi! link svssBraces Delimiter
-hi! link swiftIdentifier icebergNormalFg
+hi! link swiftIdentifier iceboneNormalFg
 hi! link TSAttribute Special
 hi! link TSBoolean Constant
 hi! link TSCharacter Constant
 hi! link TSComment Comment
-hi! link TSConstructor icebergNormalFg
+hi! link TSConstructor iceboneNormalFg
 hi! link TSConditional Statement
 hi! link TSConstant Constant
 hi! link TSConstBuiltin Constant
 hi! link TSConstMacro Constant
 hi! link TSError Error
 hi! link TSException Statement
-hi! link TSField icebergNormalFg
+hi! link TSField iceboneNormalFg
 hi! link TSFloat Constant
 hi! link TSInclude Statement
 hi! link TSKeyword Statement
@@ -418,12 +418,12 @@ hi! link TSKeywordFunction Function
 hi! link TSLabel Special
 hi! link TSNamespace Statement
 hi! link TSNumber Constant
-hi! link TSOperator icebergNormalFg
-hi! link TSParameter icebergNormalFg
-hi! link TSParameterReference icebergNormalFg
+hi! link TSOperator iceboneNormalFg
+hi! link TSParameter iceboneNormalFg
+hi! link TSParameterReference iceboneNormalFg
 hi! link TSProperty TSField
-hi! link TSPunctDelimiter icebergNormalFg
-hi! link TSPunctBracket icebergNormalFg
+hi! link TSPunctDelimiter iceboneNormalFg
+hi! link TSPunctBracket iceboneNormalFg
 hi! link TSPunctSpecial Special
 hi! link TSRepeat Statement
 hi! link TSString String
@@ -431,22 +431,22 @@ hi! link TSStringRegex String
 hi! link TSStringEscape Special
 hi! link TSTag htmlTagName
 hi! link TSTagDelimiter htmlTagName
-hi! link TSText icebergNormalFg
+hi! link TSText iceboneNormalFg
 hi! link TSTitle Title
 hi! link TSType Type
 hi! link TSTypeBuiltin Type
-hi! link TSVariable icebergNormalFg
+hi! link TSVariable iceboneNormalFg
 hi! link TSVariableBuiltin Statement
-hi! link typescriptAjaxMethods icebergNormalFg
-hi! link typescriptBraces icebergNormalFg
-hi! link typescriptEndColons icebergNormalFg
+hi! link typescriptAjaxMethods iceboneNormalFg
+hi! link typescriptBraces iceboneNormalFg
+hi! link typescriptEndColons iceboneNormalFg
 hi! link typescriptFuncKeyword Statement
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties icebergNormalFg
+hi! link typescriptHtmlElemProperties iceboneNormalFg
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage icebergNormalFg
+hi! link typescriptMessage iceboneNormalFg
 hi! link typescriptNull Constant
-hi! link typescriptParens icebergNormalFg
+hi! link typescriptParens iceboneNormalFg
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
