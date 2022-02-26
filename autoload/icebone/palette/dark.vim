@@ -9,10 +9,10 @@ function! icebone#palette#dark#create() abort
   let hue_purple = 255
   let hue_pale = 225
 
-  " gui {{{
+  "gui {{{
   let g = {}
 
-  " palette
+  "palette
   let g.blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
   let g.green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
   let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
@@ -21,11 +21,11 @@ function! icebone#palette#dark#create() abort
   let g.red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
   let g.pale   = pgmnt#color#hsl(hue_pale,   0.28, 0.72)
 
-  " normal
+  "normal
   let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
   let g.normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
 
-  " tint
+  "tint
   let g.blue_tint_bg   = pgmnt#color#mix(g.blue, g.normal_bg, 0.30)
   let g.blue_tint_fg   = pgmnt#color#mix(g.blue, g.normal_fg, 0.30)
   let g.green_tint_bg  = pgmnt#color#mix(g.green, g.normal_bg, 0.30)
@@ -37,7 +37,7 @@ function! icebone#palette#dark#create() abort
   let g.red_tint_bg    = pgmnt#color#mix(g.red, g.normal_bg, 0.30)
   let g.red_tint_fg    = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
 
-  " linenr
+  "linenr
   let g.linenr_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.05,
@@ -55,23 +55,23 @@ function! icebone#palette#dark#create() abort
         \   'lightness': +0.50,
         \ })
 
-  " diff
+  "diff
   let g.difftext_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.6)
   let g.difftext_fg = g.normal_fg
 
-  " statusline
+  "statusline
   let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
   let g.statusline_fg = pgmnt#color#hsl(hue_base, 0.09, 0.10)
   let g.statuslinenc_bg = pgmnt#color#darken(g.normal_bg, 0.03)
   let g.statuslinenc_fg = pgmnt#color#lighten(g.normal_bg, 0.20)
 
-  " pmenu
+  "pmenu
   let g.pmenu_bg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
   let g.pmenu_fg = g.normal_fg
   let g.pmenusel_bg = pgmnt#color#hsl(hue_base, 0.20, 0.45)
   let g.pmenusel_fg = pgmnt#color#hsl(hue_base, 0.20, 0.95)
 
-  " misc
+  "misc
   let g.comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
   let g.cursorline_bg = g.linenr_bg
   let g.folded_bg = g.linenr_bg
@@ -106,7 +106,7 @@ function! icebone#palette#dark#create() abort
   let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
   let g.wildmenu_fg = g.statusline_fg
 
-  " ansi colors
+  "ansi colors
   let g.term_colors = [
         \   g.cursorline_bg,
         \   g.red,
@@ -126,7 +126,7 @@ function! icebone#palette#dark#create() abort
         \   pgmnt#color#adjust_color(g.normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
         \ ]
 
-  " airline/lightline
+  "airline/lightline
   let g.xline_base_bg = g.statuslinenc_bg
   let g.xline_base_fg = g.statuslinenc_fg
   let g.xline_edge_bg = g.statusline_bg
@@ -137,14 +137,14 @@ function! icebone#palette#dark#create() abort
         \ })
   let g.xline_gradient_fg = g.comment_fg
 
-  " plugins
+  "plugins
   let g.easymotion_shade_fg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
-  " }}}
+  "}}}
 
-  " cterm {{{
+  "cterm {{{
   let c = {}
 
-  " palette
+  "palette
   let c.blue = 110
   let c.green = 150
   let c.lblue = 109
@@ -153,11 +153,11 @@ function! icebone#palette#dark#create() abort
   let c.red = 203
   let c.pale = 252
 
-  " normal
+  "normal
   let c.normal_bg = 234
   let c.normal_fg = 252
 
-  " tint
+  "tint
   let c.blue_tint_bg   = 24
   let c.blue_tint_fg   = 153
   let c.green_tint_bg  = 29
@@ -169,29 +169,29 @@ function! icebone#palette#dark#create() abort
   let c.red_tint_bg    = 95
   let c.red_tint_fg    = 224
 
-  " linenr
+  "linenr
   let c.linenr_bg = 235
   let c.linenr_fg = 239
   let c.cursorlinenr_bg = 237
   let c.cursorlinenr_fg = 253
 
-  " diff
+  "diff
   let c.difftext_bg = 30
   let c.difftext_fg = 195
 
-  " statusline
+  "statusline
   let c.statusline_bg = 245
   let c.statusline_fg = 234
   let c.statuslinenc_bg = 233
   let c.statuslinenc_fg = 238
 
-  " pmenu
+  "pmenu
   let c.pmenu_bg = 236
   let c.pmenu_fg = 251
   let c.pmenusel_bg = 240
   let c.pmenusel_fg = 255
 
-  " misc
+  "misc
   let c.comment_fg = 242
   let c.cursorline_bg = c.linenr_bg
   let c.folded_bg = c.linenr_bg
@@ -208,7 +208,7 @@ function! icebone#palette#dark#create() abort
   let c.wildmenu_bg = 255
   let c.wildmenu_fg = c.statusline_fg
 
-  " airline/lightline
+  "airline/lightline
   let c.xline_base_bg = c.statuslinenc_bg
   let c.xline_base_fg = c.statuslinenc_fg
   let c.xline_edge_bg = c.statusline_bg
@@ -216,9 +216,9 @@ function! icebone#palette#dark#create() abort
   let c.xline_gradient_bg = 236
   let c.xline_gradient_fg = c.comment_fg
 
-  " plugins
+  "plugins
   let c.easymotion_shade_fg = 239
-  " }}}
+  "}}}
 
   return {
         \   'cterm': c,

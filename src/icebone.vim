@@ -1,7 +1,7 @@
-" NOTE:
-" This script is for Pgmnt, template engine for creating Vim color scheme.
-" See the official site for more information:
-" https://github.com/cocopon/pgmnt.vim
+"NOTE:
+"This script is for Pgmnt, template engine for creating Vim color scheme.
+"See the official site for more information:
+"https://github.com/cocopon/pgmnt.vim
 
 function! s:create_colors(palette) abort
   let p = a:palette
@@ -10,7 +10,7 @@ function! s:create_colors(palette) abort
 
   let rules = []
 
-  " Rules {{{
+  "Rules {{{
   call extend(rules, pgmnt#hi#group(
         \ 'Normal', {
         \   'ctermbg': c.normal_bg,
@@ -418,18 +418,18 @@ function! s:create_colors(palette) abort
         \   'guibg': g.wildmenu_bg,
         \   'guifg': g.wildmenu_fg,
         \ }))
-  " }}}
+  "}}}
 
-  " Custom rules {{{
+  "Custom rules {{{
   call extend(rules, pgmnt#hi#group(
         \ 'iceboneNormalFg', {
         \   'ctermfg': c.normal_fg,
         \   'guifg': g.normal_fg,
         \ }))
-  " }}}
+  "}}}
 
-  " Rules for filetypes {{{
-  " diff
+  "Rules for filetypes {{{
+  "diff
   call extend(rules, pgmnt#hi#group(
         \ 'diffAdded', {
         \   'ctermfg': c.green,
@@ -440,10 +440,10 @@ function! s:create_colors(palette) abort
         \   'ctermfg': c.red,
         \   'guifg': g.red,
         \ }))
-  " }}}
+  "}}}
 
-  " Rules for plugins {{{
-  " [ALE](https://github.com/w0rp/ale)
+  "Rules for plugins {{{
+  "[ALE](https://github.com/w0rp/ale)
   call extend(rules, pgmnt#hi#group(
         \ 'ALEErrorSign', {
         \   'ctermbg': c.linenr_bg,
@@ -469,7 +469,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.orange,
         \ }))
 
-  " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+  "[CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call extend(rules, pgmnt#hi#group(
         \ 'CtrlPMode1', {
         \   'ctermbg': c.xline_gradient_bg,
@@ -478,7 +478,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.xline_gradient_fg,
         \ }))
 
-  " [EasyMotion](https://github.com/easymotion/vim-easymotion)
+  "[EasyMotion](https://github.com/easymotion/vim-easymotion)
   call extend(rules, pgmnt#hi#group(
         \ 'EasyMotionShade', {
         \   'ctermfg': c.easymotion_shade_fg,
@@ -495,7 +495,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.orange,
         \ }))
 
-  " [Git Gutter](https://github.com/airblade/vim-gitgutter)
+  "[Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterAdd', {
         \   'ctermbg': c.linenr_bg,
@@ -518,7 +518,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.red,
         \ }))
 
-  " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
+  "[git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
   call extend(rules, pgmnt#hi#group(
         \ 'gitmessengerEndOfBuffer', {
         \   'ctermbg': c.linenr_bg,
@@ -534,7 +534,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.normal_fg,
         \ }))
 
-  " [Sneak](https://github.com/justinmk/vim-sneak/)
+  "[Sneak](https://github.com/justinmk/vim-sneak/)
   call extend(rules, pgmnt#hi#group(
         \ 'Sneak', {
         \   'ctermbg': c.purple,
@@ -550,7 +550,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.comment_fg,
         \ }))
   
-  " [Syntastic](http://github.com/vim-syntastic/syntastic)
+  "[Syntastic](http://github.com/vim-syntastic/syntastic)
   call extend(rules, pgmnt#hi#group(
         \ ['SyntasticErrorSign', 'SyntasticStyleErrorSign'], {
         \   'ctermbg': c.linenr_bg,
@@ -566,7 +566,7 @@ function! s:create_colors(palette) abort
         \   'guifg': g.orange,
         \ }))
 
-  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  "[Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
   call extend(rules, pgmnt#hi#group(
         \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro'], {
         \   'ctermfg': c.pale,
@@ -586,15 +586,15 @@ function! s:create_colors(palette) abort
         \   'term': 'underline',
         \ }))
 
-  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
+  "[zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(
         \ 'ZenSpace', {
         \   'ctermbg': c.red,
         \   'guibg': g.red,
         \ }))
-  " }}}
+  "}}}
 
-  " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
+  "[Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
   for [group, color] in items({
         \   'Error': 'red',
         \   'Hint': 'comment_fg',
@@ -622,8 +622,8 @@ function! s:create_colors(palette) abort
           \   'guifg': g[color],
           \ }))
   endfor
-  " Info color is hard to read within floating window, so use normal text
-  " color instead.
+  "Info color is hard to read within floating window, so use normal text
+  "color instead.
   call extend(rules, pgmnt#hi#group(
         \ 'DiagnosticFloatingHint', {
         \   'ctermbg': c.pmenu_bg,
@@ -631,23 +631,23 @@ function! s:create_colors(palette) abort
         \   'guibg': g.pmenu_bg,
         \   'guifg': g.pmenu_fg,
         \ }))
-  " }}}
+  "}}}
 
-  " Palettes for statusline plugins {{{
+  "Palettes for statusline plugins {{{
   call extend(rules, pgmnt#hi#group(
         \ 'iceboneALAccentRed', {
         \   'ctermfg': c.red,
         \   'guifg': g.red,
         \ }))
-  " }}}
+  "}}}
 
   let quoted_term_colors = map(
         \ copy(g.term_colors),
-        \ '"''" . v:val . "''"')
+        \ '"''". v:val . "''"')
 
   let neovim_term_defs = map(
         \ copy(quoted_term_colors),
-        \ '"let g:terminal_color_" . v:key . " = " . v:val')
+        \ '"let g:terminal_color_". v:key . "= ". v:val')
   let vim_term_defs = printf(
         \ 'let g:terminal_ansi_colors = [%s]',
         \ join(quoted_term_colors, ', '),
@@ -667,50 +667,50 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('ToolbarButton', 'TabLineSel'))
   call add(links, pgmnt#hi#link('ToolbarLine', 'TabLineFill'))
 
-  " Rules for filetypes {{{
-  " css
+  "Rules for filetypes {{{
+  "css
   call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
   call add(links, pgmnt#hi#link('cssClassName', 'Special'))
   call add(links, pgmnt#hi#link('cssClassNameDot', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('cssPseudoClassId', 'Special'))
   call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
 
-  " help
+  "help
   call add(links, pgmnt#hi#link('helpHyperTextJump', 'Constant'))
 
-  " html
+  "html
   call add(links, pgmnt#hi#link('htmlArg', 'Constant'))
   call add(links, pgmnt#hi#link('htmlEndTag', 'Statement'))
   call add(links, pgmnt#hi#link('htmlTag', 'Statement'))
 
-  " json
+  "json
   call add(links, pgmnt#hi#link('jsonQuote', 'iceboneNormalFg'))
 
-  " php
+  "php
   call add(links, pgmnt#hi#link('phpVarSelector', 'Identifier'))
 
-  " python
+  "python
   call add(links, pgmnt#hi#link('pythonFunction', 'Title'))
 
-  " ruby
+  "ruby
   call add(links, pgmnt#hi#link('rubyDefine', 'Statement'))
   call add(links, pgmnt#hi#link('rubyFunction', 'Title'))
   call add(links, pgmnt#hi#link('rubyInterpolationDelimiter', 'String'))
   call add(links, pgmnt#hi#link('rubySharpBang', 'Comment'))
   call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
 
-  " rust
+  "rust
   call add(links, pgmnt#hi#link('rustFuncCall', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('rustFuncName', 'Title'))
   call add(links, pgmnt#hi#link('rustType', 'Constant'))
 
-  " sass
+  "sass
   call add(links, pgmnt#hi#link('sassClass', 'Special'))
 
-  " sh
+  "sh
   call add(links, pgmnt#hi#link('shFunction', 'iceboneNormalFg'))
 
-  " vim
+  "vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
   call add(links, pgmnt#hi#link('vimFuncSID', 'vimFunction'))
   call add(links, pgmnt#hi#link('vimFuncVar', 'iceboneNormalFg'))
@@ -722,7 +722,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('vimOption', 'Identifier'))
   call add(links, pgmnt#hi#link('vimVar', 'iceboneNormalFg'))
 
-  " xml
+  "xml
   call add(links, pgmnt#hi#link('xmlAttrib', 'Constant'))
   call add(links, pgmnt#hi#link('xmlAttribPunct', 'Statement'))
   call add(links, pgmnt#hi#link('xmlEndTag', 'Statement'))
@@ -730,21 +730,21 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('xmlTag', 'Statement'))
   call add(links, pgmnt#hi#link('xmlTagName', 'Statement'))
 
-  " yaml
+  "yaml
   call add(links, pgmnt#hi#link('yamlKeyValueDelimiter', 'Delimiter'))
-  " }}}
+  "}}}
 
-  " Rules for plugins {{{
-  " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+  "Rules for plugins {{{
+  "[CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call add(links, pgmnt#hi#link('CtrlPPrtCursor', 'Cursor'))
   call add(links, pgmnt#hi#link('CtrlPMatch', 'Title'))
   call add(links, pgmnt#hi#link('CtrlPMode2', 'StatusLine'))
 
-  " [Denite](https://github.com/Shougo/denite.nvim)
+  "[Denite](https://github.com/Shougo/denite.nvim)
   call add(links, pgmnt#hi#link('deniteMatched', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('deniteMatchedChar', 'Title'))
 
-  " [vim-elixir](https://github.com/elixir-editors/vim-elixir)
+  "[vim-elixir](https://github.com/elixir-editors/vim-elixir)
   call add(links, pgmnt#hi#link('elixirBlockDefinition', 'Statement'))
   call add(links, pgmnt#hi#link('elixirDefine', 'Statement'))
   call add(links, pgmnt#hi#link('elixirDocSigilDelimiter', 'String'))
@@ -758,21 +758,21 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('elixirPrivateDefine', 'Statement'))
   call add(links, pgmnt#hi#link('elixirStringDelimiter', 'String'))
 
-  " [vim-flow](https://github.com/flowtype/vim-flow)
+  "[vim-flow](https://github.com/flowtype/vim-flow)
   call add(links, pgmnt#hi#link('jsFlowMaybe', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('jsFlowObject', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('jsFlowType', 'PreProc'))
 
-  " [vim-graphql](https://github.com/jparise/vim-graphql)
+  "[vim-graphql](https://github.com/jparise/vim-graphql)
   call add(links, pgmnt#hi#link('graphqlName', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('graphqlOperator', 'iceboneNormalFg'))
 
-  " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
+  "[git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
   call add(links, pgmnt#hi#link('gitmessengerHash', 'Comment'))
   call add(links, pgmnt#hi#link('gitmessengerHeader', 'Statement'))
   call add(links, pgmnt#hi#link('gitmessengerHistory', 'Constant'))
 
-  " [vim-javascript](https://github.com/pangloss/vim-javascript)
+  "[vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
   call add(links, pgmnt#hi#link('jsClassDefinition', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('jsClassFuncName', 'Title'))
@@ -790,30 +790,30 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('jsTemplateBraces', 'Special'))
   call add(links, pgmnt#hi#link('jsUndefined', 'Constant'))
 
-  " [vim-markdown](https://github.com/tpope/vim-markdown)
+  "[vim-markdown](https://github.com/tpope/vim-markdown)
   call add(links, pgmnt#hi#link('markdownBold', 'Special'))
   call add(links, pgmnt#hi#link('markdownCode', 'String'))
   call add(links, pgmnt#hi#link('markdownCodeDelimiter', 'String'))
   call add(links, pgmnt#hi#link('markdownHeadingDelimiter', 'Comment'))
   call add(links, pgmnt#hi#link('markdownRule', 'Comment'))
 
-  " [nginx.vim](https://github.com/chr4/nginx.vim)
+  "[nginx.vim](https://github.com/chr4/nginx.vim)
   call add(links, pgmnt#hi#link('ngxDirective', 'Statement'))
 
-  " [vim-plug](https://github.com/junegunn/vim-plug)
+  "[vim-plug](https://github.com/junegunn/vim-plug)
   call add(links, pgmnt#hi#link('plug1', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('plug2', 'Identifier'))
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
 
-  " [Signify](https://github.com/mhinz/vim-signify/)
+  "[Signify](https://github.com/mhinz/vim-signify/)
   call add(links, pgmnt#hi#link('SignifySignAdd', 'GitGutterAdd'))
   call add(links, pgmnt#hi#link('SignifySignChange', 'GitGutterChange'))
   call add(links, pgmnt#hi#link('SignifySignChangeDelete', 'GitGutterChangeDelete'))
   call add(links, pgmnt#hi#link('SignifySignDelete', 'GitGutterDelete'))
   call add(links, pgmnt#hi#link('SignifySignDeleteFirstLine', 'SignifySignDelete'))
 
-  " [Startify](https://github.com/mhinz/vim-startify)
+  "[Startify](https://github.com/mhinz/vim-startify)
   call add(links, pgmnt#hi#link('StartifyBracket', 'Comment'))
   call add(links, pgmnt#hi#link('StartifyFile', 'Identifier'))
   call add(links, pgmnt#hi#link('StartifyFooter', 'Constant'))
@@ -824,13 +824,13 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('StartifySlash', 'Comment'))
   call add(links, pgmnt#hi#link('StartifySpecial', 'iceboneNormalFg'))
 
-  " [SVSS](https://github.com/cocopon/svss.vim)
+  "[SVSS](https://github.com/cocopon/svss.vim)
   call add(links, pgmnt#hi#link('svssBraces', 'Delimiter'))
 
-  " [vim-swift](https://github.com/toyamarinyon/vim-swift)
+  "[vim-swift](https://github.com/toyamarinyon/vim-swift)
   call add(links, pgmnt#hi#link('swiftIdentifier', 'iceboneNormalFg'))
 
-  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  "[Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
   call add(links, pgmnt#hi#link('TSAttribute', 'Special'))
   call add(links, pgmnt#hi#link('TSBoolean', 'Constant'))
   call add(links, pgmnt#hi#link('TSCharacter', 'Constant'))
@@ -870,7 +870,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSVariable', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('TSVariableBuiltin', 'Statement'))
 
-  " [typescript-vim](https://github.com/leafgarland/typescript-vim)
+  "[typescript-vim](https://github.com/leafgarland/typescript-vim)
   call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('typescriptBraces', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('typescriptEndColons', 'iceboneNormalFg'))
@@ -881,7 +881,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'iceboneNormalFg'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'iceboneNormalFg'))
-  " }}}
+  "}}}
 
   return links
 endfunction
