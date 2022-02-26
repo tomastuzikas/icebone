@@ -2,8 +2,8 @@ function! icebone#palette#dark#create() abort
   let hue_base = 230
 
   let hue_red = 0
-  let hue_orange = 25
-  let hue_green = 323
+  let hue_orange = 96
+  let hue_green = 347
   let hue_lblue = 190
   let hue_blue = 215
   let hue_purple = 255
@@ -14,9 +14,9 @@ function! icebone#palette#dark#create() abort
 
   "palette
   let g.blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
-  let g.green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
+  let g.green  = pgmnt#color#hsl(hue_green,  0.21, 0.64)
   let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
-  let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
+  let g.orange = pgmnt#color#hsl(hue_orange, 0.66, 0.84)
   let g.purple = pgmnt#color#hsl(hue_purple, 0.32, 0.68)
   let g.red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
   let g.pale   = pgmnt#color#hsl(hue_pale,   0.28, 0.72)
