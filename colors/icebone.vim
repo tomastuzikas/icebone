@@ -3,7 +3,7 @@
 "  | | |____| ____| ___ < ____| __  / |__ \
 " /___\_____|_____|_____/_____|_| \_\_____/
 "
-" File:       iceberg.vim
+" File:       icebone.vim
 " Maintainer: cocopon <cocopon@me.com>
 " Modified:   2021-12-28 09:50+0900
 " License:    MIT
@@ -18,7 +18,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'iceberg'
+let g:colors_name = 'icebone'
 
 if &background == 'light'
   hi Normal ctermbg=254 ctermfg=237 guibg=#e8e9ec guifg=#33374c

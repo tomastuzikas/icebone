@@ -1,9 +1,9 @@
-function! iceberg#palette#dark#create() abort
+function! icebone#palette#dark#create() abort
   let hue_base = 230
 
   let hue_red = 0
   let hue_orange = 25
-  let hue_green = 70
+  let hue_green = 323
   let hue_lblue = 190
   let hue_blue = 215
   let hue_purple = 255

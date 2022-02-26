@@ -888,9 +888,9 @@ endfunction
 
 function! s:create_context() abort
   let d = s:create_colors(
-        \ iceberg#palette#dark#create())
+        \ icebone#palette#dark#create())
   let l = s:create_colors(
-        \ iceberg#palette#light#create())
+        \ icebone#palette#light#create())
   let links = s:create_links()
 
   return {
@@ -906,14 +906,14 @@ function! s:create_context() abort
 endfunction
 
 call pgmnt#compile(s:create_context(), {
-      \   'output': '../colors/iceberg.vim',
+      \   'output': '../colors/icebone.vim',
       \   'template': './template.vim',
       \ })
 
 function! s:create_xline_context() abort
   let ps = {
-        \   'dark': iceberg#palette#dark#create(),
-        \   'light': iceberg#palette#light#create(),
+        \   'dark': icebone#palette#dark#create(),
+        \   'light': icebone#palette#light#create(),
         \ }
   let context = {}
   for [bg, p] in items(ps)
@@ -995,11 +995,11 @@ endfunction
 
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/airline/themes/iceberg.vim',
+      \   'output': '../autoload/airline/themes/icebone.vim',
       \   'template': './template-airline.vim',
       \ })
 call pgmnt#compile(
       \ s:create_xline_context(), {
-      \   'output': '../autoload/lightline/colorscheme/iceberg.vim',
+      \   'output': '../autoload/lightline/colorscheme/icebone.vim',
       \   'template': './template-lightline.vim',
       \ })
