@@ -32,10 +32,10 @@ function! s:build_palette() abort
     let col_tabfill  = ['#3e445e', '#0f1117', 238, 233]
     let col_normal   = ['#17171b', '#818596', 234, 245]
     let col_error    = ['#161821', '#e27878', 234, 203]
-    let col_warning  = ['#161821', '#e2a478', 234, 216]
+    let col_warning  = ['#161821', '#d0f1bb', 234, 216]
     let col_insert   = ['#161821', '#84a0c6', 234, 110]
-    let col_replace  = ['#161821', '#e2a478', 234, 216]
-    let col_visual   = ['#161821', '#be82a7', 234, 150]
+    let col_replace  = ['#161821', '#d0f1bb', 234, 216]
+    let col_visual   = ['#161821', '#b68f98', 234, 150]
     let col_tabsel   = ['#17171b', '#818596', 234, 245]
   endif
 
